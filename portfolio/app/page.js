@@ -7,20 +7,19 @@ import Progetto from "@/components/Riquadro_Progetto";
 
 export default function Home() {
   return (
-   
-<div>
-  <div className="flex justify-around grid grid-cols-2">
-  <IO/>
-<Immagini/>
-</div>
-<br></br>
-<div className="flex justify-around grid grid-cols-1">  
-  <Navbar/>
-<div className="grid grid-cols-2">
-  <Navigazione/>
-  <Progetto/></div>
-</div>
-</div>
-
+    <div>
+      <div className="mt-15 ml-15 flex justify-start ">
+        <IO />
+        <Immagini />
+      </div>
+      <br></br>
+      <div className="grid grid-cols-1 mt-5 ml-15">
+        <Navbar />
+        <div className="flex justify-start">
+          <Navigazione />
+          <Progetto />
+        </div>
+      </div>
+    </div>
   );
 }

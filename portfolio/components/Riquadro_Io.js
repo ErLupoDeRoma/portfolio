@@ -1,11 +1,11 @@
 export default function IO() {
   return (
     <>
-      <div id="generale" className="flex flex-col bg-blue-500 w-125">
-        <div id="nome">
-            Luca Rivoli
+      <div id="generale" className=" flex justify-start bg-blue-500 w-175 h-40">
+        <div id="nome" className="mt-10 ml-5 text-lg">
+            Luca<br/>Rivoli
         </div>
-        <div id="info">
+        <div id="info" className="mt-10 ml-50">
           <ul>
             <li>E-Mail=</li>
             <li>Numero di telefono=</li>
