@@ -29,3 +29,11 @@ body {
   text-align: start;
   line-height: 80px;
 }
+
+.nav-option:hover {
+  border-color: #ffffff;
+  background: #0D5CC3;
+  border-width: 1px;
+  border-style: solid;
+
+}
