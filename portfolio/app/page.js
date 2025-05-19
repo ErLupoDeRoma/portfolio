@@ -13,11 +13,12 @@ export default function Home() {
   <IO/>
 <Immagini/>
 </div>
-
-<div>  
+<br></br>
+<div className="flex justify-around grid grid-cols-1">  
   <Navbar/>
+<div className="grid grid-cols-2">
   <Navigazione/>
-  <Progetto/>
+  <Progetto/></div>
 </div>
 </div>
 
