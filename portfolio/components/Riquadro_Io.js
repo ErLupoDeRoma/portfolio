@@ -1,15 +1,24 @@
 export default function IO() {
   return (
     <>
-      <div id="generale" className=" flex justify-start bg-blue-500 w-175 h-40">
-        <div id="nome" className="mt-10 ml-5 text-lg">
-            Luca<br/>Rivoli
+      <div
+        id="generale"
+        className=" flex justify-start bg-[#0D5CC3] w-175 h-40 rounded-lg border border-white"
+      >
+        <div id="nome" className=" ml-5 text-5xl ">
+          Luca
+          <br />
+          Rivoli
         </div>
-        <div id="info" className="mt-10 ml-50">
+        <div id="info" className="mt-10 ml-20 text-lg">
           <ul>
-            <li>E-Mail=</li>
-            <li>Numero di telefono=</li>
-            <li>GitHub=</li>
+            <li><b>E-Mail:</b> l.rivoli@sandonadipiave.it</li>
+            <li><b>Numero di telefono:</b> +39 820 992 6628</li>
+            <li><b>GitHub:</b>&nbsp;
+              <a href="https://github.com/ErLupoDeRoma"> 
+                github.com/ErLupoDeRoma
+              </a>
+            </li>
           </ul>
         </div>
       </div>
