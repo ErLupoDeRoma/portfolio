@@ -53,7 +53,7 @@ export default function Sezione_Progetti() {
   return (
     <>
       <div className=" flex justify-start">
-        <Riquadro_Navigazione_Progetti onSelect={imposta_progetto} />
+        <Riquadro_Navigazione_Progetti bordoFisso={progetto_da_mostrare} onSelect={imposta_progetto} />
         <Template_Progetto Progetto={progetto_selezionato()} />
       </div>
     </>

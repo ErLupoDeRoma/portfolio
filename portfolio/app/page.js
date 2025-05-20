@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       <br></br>
       <div className="grid grid-cols-1 mt-5 ml-15">
-        <Navbar onSelect={imposta_sezione} />
+        <Navbar bordoFisso={sezione_da_mostrare} onSelect={imposta_sezione} />
         {sezione_selezionata()}
       </div>
     </div>
