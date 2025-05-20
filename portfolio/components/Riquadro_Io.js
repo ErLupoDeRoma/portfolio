@@ -3,7 +3,7 @@ export default function IO() {
     <>
       <div
         id="generale"
-        className=" flex justify-start bg-[#0D5CC3] w-175 h-40 rounded-lg border border-white"
+        className=" flex justify-start w-175 h-40 rounded-lg border border-white"
       >
         <div id="nome" className=" ml-5 text-5xl ">
           Luca

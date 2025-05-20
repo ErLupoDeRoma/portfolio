@@ -1,7 +1,7 @@
 export default function Progetto() {
   return (
     <>
-      <div className="mt-5 ml-10 bg-[#0D5CC3] w-370 h-120 rounded-lg border border-white flex justify-start">
+      <div className="mt-5 ml-10 w-370 h-120 rounded-lg  flex justify-start border border-white">
         <div className="w-5/5">
           <div className="mt-5 ml-5 text-2xl font-semibold">Progetto 1</div>
           <div className="mt-2 ml-5 text-lg">

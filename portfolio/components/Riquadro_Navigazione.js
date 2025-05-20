@@ -3,9 +3,9 @@ export default function Navigazione() {
     <>
       <div
         id="generale"
-        className="mt-5 flex flex-col bg-[#0D5CC3] w-50 h-120 rounded-lg border border-white"
+        className="mt-5 flex flex-col w-50 h-120 rounded-lg border border-white"
       >
-        <div id="progetti" className="mt-5 pb-5 text-2xl text-center">
+        <div id="progetti" className="mt-5 pb-5 text-2xl text-center font-semibold">
           Progetti
         </div>
 

@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -32,7 +32,6 @@ body {
 
 .nav-option:hover {
   border-color: #ffffff;
-  background: #0D5CC3;
   border-width: 1px;
   border-style: solid;
 
