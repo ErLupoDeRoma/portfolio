@@ -1,6 +1,7 @@
-
-
-export default function Riquadro_Navigazione_Progetti({onSelect, bordoFisso}) {
+export default function Riquadro_Navigazione_Progetti({
+  onSelect,
+  bordoFisso,
+}) {
   return (
     <>
       <div
@@ -14,16 +15,28 @@ export default function Riquadro_Navigazione_Progetti({onSelect, bordoFisso}) {
           Progetti
         </div>
 
-        <button onClick={() => onSelect('progetto1')}
-           id="progetto_1" className={bordoFisso === 'progetto1'? 'border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg':'mt-2 text-lg text-center nav-option mx-10 rounded-lg'}>
-            Progetto 1
-          
+        <button
+          onClick={() => onSelect("progetto_1")}
+          id="progetto_1"
+          className={
+            bordoFisso === "progetto1"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+          }
+        >
+          Progetto 1
         </button>
 
-        <button onClick={() => onSelect('progetto2')}
-           id="progetto_2" className={bordoFisso === 'progetto2'? 'border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg':'mt-2 text-lg text-center nav-option mx-10 rounded-lg'}>
-            Progetto 2
-          
+        <button
+          onClick={() => onSelect("progetto2")}
+          id="progetto_2"
+          className={
+            bordoFisso === "progetto2"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+          }
+        >
+          Progetto 2
         </button>
       </div>
     </>

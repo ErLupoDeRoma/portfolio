@@ -1,20 +1,43 @@
-export default function Riquadro_Navigazione_Esperienze() {
+export default function Riquadro_Navigazione_Esperienze({
+  onSelect,
+  bordoFisso,
+}) {
   return (
     <>
       <div
         id="generale"
         className="mt-5 flex flex-col w-50 h-120 rounded-lg border border-white"
       >
-        <div id="progetti" className="mt-5 pb-5 text-2xl text-center font-semibold">
+        <div
+          id="progetti"
+          className="mt-5 pb-5 text-2xl text-center font-semibold"
+        >
           Esperienze
         </div>
 
-        <li id="progetto_1" className="mt-2 mr-5 text-lg text-center">
+        <button
+          onClick={() => onSelect("esperienza1")}
+          id="esperienza_1"
+          className={
+            bordoFisso === "esperienza1"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+          }
+        >
           Esperienza 1
-        </li>
-        <li id="progetto_2" className="mt-2 mr-5 text-lg text-center">
+        </button>
+        
+        <button
+          onClick={() => onSelect("esperienza2")}
+          id="esperienza_2"
+          className={
+            bordoFisso === "esperienza2"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+          }
+        >
           Esperienza 2
-        </li>
+        </button>
       </div>
     </>
   );

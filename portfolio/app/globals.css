@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: rgb(15 23 42);
     --foreground: #ededed;
   }
 }
@@ -34,6 +34,6 @@ body {
   border-color: #ffffff;
   border-width: 2px;
   border-style: solid;
-
+   cursor: url('/portfolio/public/images/Logo5.png'), auto;
 }
 
