@@ -1,4 +1,4 @@
-export default function Navigazione() {
+export default function Riquadro_Navigazione_Esperienze() {
   return (
     <>
       <div
@@ -6,14 +6,14 @@ export default function Navigazione() {
         className="mt-5 flex flex-col w-50 h-120 rounded-lg border border-white"
       >
         <div id="progetti" className="mt-5 pb-5 text-2xl text-center font-semibold">
-          Progetti
+          Esperienze
         </div>
 
         <li id="progetto_1" className="mt-2 mr-5 text-lg text-center">
-          Progetto 1
+          Esperienza 1
         </li>
         <li id="progetto_2" className="mt-2 mr-5 text-lg text-center">
-          Progetto 2
+          Esperienza 2
         </li>
       </div>
     </>

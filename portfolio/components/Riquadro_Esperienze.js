@@ -1,9 +1,9 @@
-export default function Sezione_Chi_sono() {
+export default function Riquadro_Esperienze() {
   return (
     <>
-      <div className="mt-5 w-430 h-120 rounded-lg flex justify-start border border-white">
-        <div className="w-full">
-          <div className="mt-5 ml-5 text-2xl font-semibold">Chi sono ?</div>
+      <div className="mt-5 ml-10 w-370 h-120 rounded-lg  flex justify-start border border-white">
+        <div className="w-5/5">
+          <div className="mt-5 ml-5 text-2xl font-semibold">Esperienze</div>
           <div className="mt-2 ml-5 text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             ultrices posuere nibh, nec dictum nisi lobortis ac. Donec aliquet,
@@ -19,6 +19,13 @@ export default function Sezione_Chi_sono() {
             pulvinar accumsan libero. Sed accumsan fringilla eros, sed fermentum
             erat porttitor ut.
           </div>
+        </div>
+
+        <div className="m-5 flex justify-center items-center">
+          <img src="/images/Venistar.webp"
+          width="1800px"
+          height="600px" 
+          className="rounded-lg border border-white"/>
         </div>
       </div>
     </>
