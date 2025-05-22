@@ -23,6 +23,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+   cursor: none;
+  /*cursor: url('/images/PNG.png') 16 16, auto;*/
 }
 
 #nome {
@@ -34,6 +36,7 @@ body {
   border-color: #ffffff;
   border-width: 2px;
   border-style: solid;
-   cursor: url('/portfolio/public/images/Logo5.png'), auto;
+   cursor: none;
+  /*cursor: url('/images/PNG.png') 16 16, auto;*/
 }
 

@@ -1,5 +1,6 @@
 import Riquadro_Navigazione_Progetti from "./Riquadro_Navigazione_Progetti";
 import Template_Progetto from "./Template_Progetto";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function Sezione_Progetti() {
@@ -39,10 +40,13 @@ export default function Sezione_Progetti() {
   };
 
   const [progetto_da_mostrare, imposta_progetto] = useState("progetto1");
+  var id_selezionato = 1;
   const progetto_selezionato = () => {
     if (progetto_da_mostrare == "progetto1") {
+      id_selezionato = 1;
       return Progetto1;
     } else if (progetto_da_mostrare == "progetto2") {
+      id_selezionato = 2;
       return Progetto2;
     }
   };
@@ -54,7 +58,19 @@ export default function Sezione_Progetti() {
           bordoFisso={progetto_da_mostrare}
           onSelect={imposta_progetto}
         />
-        <Template_Progetto Progetto={progetto_selezionato()} />
+        <div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={id_selezionato}
+              initial={{ opacity: 0,x:-20 }}
+              animate={{ opacity: 1,x:0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0,x:20 }}
+            >
+              <Template_Progetto Progetto={progetto_selezionato()} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </>
   );
