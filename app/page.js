@@ -7,15 +7,15 @@ import Sezione_Progetti from "@/components/Sezione_progetti";
 import Sezione_Chi_sono from "@/components/Sezione_Chi_sono";
 import Sezione_Esperienze from "@/components/Sezione_Esperienze";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   useEffect(() => {
     let cursore = document.getElementById("cursore");
 
     const ingrandisci_cerchio = () => {
-      cursore.classList.add("w-10"); 
-      cursore.classList.add("h-10"); 
-
+      cursore.classList.add("w-10");
+      cursore.classList.add("h-10");
     };
 
     const riduci_cerchio = () => {
@@ -39,13 +39,16 @@ export default function Home() {
   }, []);
 
   const [sezione_da_mostrare, imposta_sezione] = useState("chi_sono");
-
+  var id_selezionato = 1;
   const sezione_selezionata = () => {
     if (sezione_da_mostrare == "chi_sono") {
+      id_selezionato = 1;
       return <Sezione_Chi_sono />;
     } else if (sezione_da_mostrare == "progetti") {
+      id_selezionato = 2;
       return <Sezione_Progetti />;
     } else if (sezione_da_mostrare == "esperienze") {
+      id_selezionato = 3;
       return <Sezione_Esperienze />;
     }
   };
@@ -63,7 +66,18 @@ export default function Home() {
       <br></br>
       <div className="grid grid-cols-1 mt-5 ml-15">
         <Navbar bordoFisso={sezione_da_mostrare} onSelect={imposta_sezione} />
-        {sezione_selezionata()}
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={id_selezionato}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: 20 }}
+          >
+            {sezione_selezionata()}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
