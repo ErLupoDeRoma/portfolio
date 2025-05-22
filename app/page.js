@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Home() {
   useEffect(() => {
     let cursore = document.getElementById("cursore");
+    let bagliore = document.getElementById("bagliore");
 
     const ingrandisci_cerchio = () => {
       cursore.classList.add("w-10");
@@ -35,6 +36,9 @@ export default function Home() {
       let y = evento.clientY;
       cursore.style.left = x + "px";
       cursore.style.top = y + "px";
+
+      bagliore.style.left = x + "px";
+      bagliore.style.top = y + "px";
     });
   }, []);
 
@@ -56,9 +60,14 @@ export default function Home() {
   return (
     <div>
       <div
-        id="cursore"
-        className="fixed top-0 left-0 w-3 h-3 pointer-events-none z-50 cerchio transition-[width,height] duration-200 ease-out outline-2 outline-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
+        id="bagliore"
+        className="rounded-full opacita transform -translate-x-1/2 -translate-y-1/2 blur-2xl fixed pointer-events-none inset-0 z-30 transition duration-300 h-600 w-600"
       ></div>
+      <div
+        id="cursore"
+        className="fixed top-0 left-0 w-3 h-3 pointer-events-none z-50 transition-[width,height] duration-200 ease-out outline-2 outline-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
+      ></div>
+
       <div className="mt-15 ml-15 flex justify-start ">
         <IO />
         <Immagini />

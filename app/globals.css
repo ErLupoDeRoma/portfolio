@@ -45,7 +45,9 @@ body {
   border-width: 2px;
   border-style: solid;
   cursor: none;
-
   /*cursor: url('/images/PNG.png') 16 16, auto;*/
 }
 
+.opacita {
+   background: radial-gradient(600px, rgba(29, 78, 216, 0.15), transparent 80%)
+}
