@@ -1,18 +1,15 @@
-
 import { useState, useEffect } from "react";
 
 export default function Riquadro_Navigazione_Progetti({
   onSelect,
   bordoFisso,
 }) {
-
-useEffect(() => {
+  useEffect(() => {
     let cursore = document.getElementById("cursore");
 
     const ingrandisci_cerchio = () => {
-      cursore.classList.add("w-10"); 
-      cursore.classList.add("h-10"); 
-
+      cursore.classList.add("w-10");
+      cursore.classList.add("h-10");
     };
 
     const riduci_cerchio = () => {
@@ -34,7 +31,6 @@ useEffect(() => {
       cursore.style.top = y + "px";
     });
   }, []);
-
 
   return (
     <>

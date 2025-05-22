@@ -1,5 +1,6 @@
 import Riquadro_Navigazione_Esperienze from "./Riquadro_Navigazione_Esperienze";
 import Template_Esperienze from "./Template_Esperienze";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function Sezione_Esperienze() {
@@ -39,10 +40,13 @@ export default function Sezione_Esperienze() {
   };
 
   const [esperienza_da_mostrare, imposta_esperienza] = useState("esperienza1");
+  var id_selezionato = 1;
   const esperienza_selezionata = () => {
     if (esperienza_da_mostrare == "esperienza1") {
+      id_selezionato = 1;
       return esperienza1;
     } else if (esperienza_da_mostrare == "esperienza2") {
+      id_selezionato = 2;
       return esperienza2;
     }
   };
@@ -54,7 +58,19 @@ export default function Sezione_Esperienze() {
           bordoFisso={esperienza_da_mostrare}
           onSelect={imposta_esperienza}
         />
-        <Template_Esperienze Esperienza={esperienza_selezionata()} />
+        <div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={id_selezionato}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: 20 }}
+            >
+              <Template_Esperienze Esperienza={esperienza_selezionata()} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </>
   );

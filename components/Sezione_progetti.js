@@ -62,10 +62,10 @@ export default function Sezione_Progetti() {
           <AnimatePresence mode="wait">
             <motion.div
               key={id_selezionato}
-              initial={{ opacity: 0,x:-20 }}
-              animate={{ opacity: 1,x:0 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              exit={{ opacity: 0,x:20 }}
+              exit={{ opacity: 0, x: 20 }}
             >
               <Template_Progetto Progetto={progetto_selezionato()} />
             </motion.div>

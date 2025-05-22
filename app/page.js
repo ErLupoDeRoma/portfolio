@@ -54,7 +54,7 @@ export default function Home() {
     <div>
       <div
         id="cursore"
-        className="fixed top-0 left-0 w-3 h-3 pointer-events-none z-50 cerchio transition-[width,height] duration-100 ease-out outline-2 outline-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
+        className="fixed top-0 left-0 w-3 h-3 pointer-events-none z-50 cerchio transition-[width,height] duration-200 ease-out outline-2 outline-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
       ></div>
       <div className="mt-15 ml-15 flex justify-start ">
         <IO />
