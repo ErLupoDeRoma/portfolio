@@ -23,7 +23,7 @@ export default function Home() {
       cursore.classList.remove("h-10");
     };
 
-    const lista_bottoni = document.querySelectorAll(".nav-option");
+    const lista_bottoni = document.querySelectorAll(".cursor");
 
     lista_bottoni.forEach((bottone) => {
       bottone.addEventListener("mouseenter", ingrandisci_cerchio);

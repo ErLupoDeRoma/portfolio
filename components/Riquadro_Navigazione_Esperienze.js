@@ -17,7 +17,7 @@ export default function Riquadro_Navigazione_Esperienze({
       cursore.classList.remove("h-10");
     };
 
-    const lista_bottoni = document.querySelectorAll(".nav-option");
+    const lista_bottoni = document.querySelectorAll(".cursor");
 
     lista_bottoni.forEach((bottone) => {
       bottone.addEventListener("mouseenter", ingrandisci_cerchio);
@@ -50,8 +50,8 @@ export default function Riquadro_Navigazione_Esperienze({
           id="esperienza_1"
           className={
             bordoFisso === "esperienza1"
-              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
-              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
           }
         >
           Esperienza 1
@@ -62,8 +62,8 @@ export default function Riquadro_Navigazione_Esperienze({
           id="esperienza_2"
           className={
             bordoFisso === "esperienza2"
-              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg"
-              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg"
+              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
+              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
           }
         >
           Esperienza 2
