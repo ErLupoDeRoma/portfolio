@@ -20,7 +20,7 @@ export default function Sezione_Esperienze() {
       "justo pretium. Sed lorem tellus, sollicitudin eget ligula nec," +
       "pulvinar accumsan libero. Sed accumsan fringilla eros, sed fermentum" +
       "erat porttitor ut.",
-    Immagine: "/images/Venistar.webp",
+    Immagine: "/images/Venistar.png",
   };
 
   const esperienza2 = {
@@ -53,7 +53,7 @@ export default function Sezione_Esperienze() {
 
   return (
     <>
-      <div className=" flex flex-col md:flex-row md:h-100 justify-between">
+      <div className=" flex flex-col md:flex-row justify-between h-full">
         <div>
           <Riquadro_Navigazione_Esperienze
             bordoFisso={esperienza_da_mostrare}

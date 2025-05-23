@@ -1,7 +1,7 @@
 export default function Navbar({ onSelect, bordoFisso }) {
   return (
     <>
-      <div id="generale" className="flex flex-row justify-around md:justify-start">
+      <div id="generale" className="flex flex-row justify-around md:justify-start pb-5">
         <button
           onClick={() => onSelect("chi_sono")}
           id="chi_sono"

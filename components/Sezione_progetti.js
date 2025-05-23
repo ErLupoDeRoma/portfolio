@@ -53,13 +53,13 @@ export default function Sezione_Progetti() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:h-100 justify-between">
+      <div className="flex flex-col md:flex-row justify-between h-full">
         <Riquadro_Navigazione_Progetti
           bordoFisso={progetto_da_mostrare}
           onSelect={imposta_progetto}
         />
         <div>
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" className="h-full ">
             <motion.div
               key={id_selezionato}
               initial={{ opacity: 0, x: -20 }}

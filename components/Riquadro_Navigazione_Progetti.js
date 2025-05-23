@@ -36,7 +36,7 @@ export default function Riquadro_Navigazione_Progetti({
     <>
       <div
         id="generale"
-        className="mt-5 flex md:h-full flex-col rounded-lg border border-white px-5 pb-3"
+        className="flex md:h-full flex-col rounded-lg border border-white px-5 pb-3 md:"
       >
         <div
           id="progetti"
