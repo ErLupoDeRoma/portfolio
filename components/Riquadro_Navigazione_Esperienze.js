@@ -36,7 +36,7 @@ export default function Riquadro_Navigazione_Esperienze({
     <>
       <div
         id="generale"
-        className="mt-5 flex flex-col w-50 h-120 rounded-lg border border-white"
+        className="mt-5 flex md:h-full flex-col rounded-lg border border-white px-5 pb-3"
       >
         <div
           id="progetti"
@@ -50,8 +50,8 @@ export default function Riquadro_Navigazione_Esperienze({
           id="esperienza_1"
           className={
             bordoFisso === "esperienza1"
-              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
-              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
+              ? "border border-white mt-2 text-lg text-center nav-option px-2 rounded-lg cursor"
+              : "mt-2 text-lg text-center nav-option px-2 rounded-lg cursor"
           }
         >
           Esperienza 1
@@ -62,8 +62,8 @@ export default function Riquadro_Navigazione_Esperienze({
           id="esperienza_2"
           className={
             bordoFisso === "esperienza2"
-              ? "border border-white mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
-              : "mt-2 text-lg text-center nav-option mx-10 rounded-lg cursor"
+              ? "border border-white mt-2 text-lg text-center nav-option px-2 rounded-lg cursor"
+              : "mt-2 text-lg text-center nav-option px-2 rounded-lg cursor"
           }
         >
           Esperienza 2

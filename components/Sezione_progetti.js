@@ -53,7 +53,7 @@ export default function Sezione_Progetti() {
 
   return (
     <>
-      <div className=" flex justify-start">
+      <div className="flex flex-col md:flex-row md:h-100 justify-between">
         <Riquadro_Navigazione_Progetti
           bordoFisso={progetto_da_mostrare}
           onSelect={imposta_progetto}

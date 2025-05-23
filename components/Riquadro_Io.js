@@ -47,14 +47,14 @@ export default function IO() {
     <>
       <div
         id="generale"
-        className=" flex justify-start w-175 h-40 rounded-lg border border-white"
+        className=" flex justify-start rounded-lg border border-white flex-col md:flex-row items-center md:w-170 md:justify-around"
       >
-        <div id="nome" className=" ml-5 text-5xl ">
+        <div id="nome" className=" px-5 text-5xl">
           Luca
           <br />
           Rivoli
         </div>
-        <div id="info" className="mt-10 ml-20 text-lg">
+        <div id="info" className="flex py-5 md:py-10 text-md md:text-lg">
           <ul>
             <li><b>E-Mail:</b> l.rivoli@sandonadipiave.it</li>
             <li><b>Numero di telefono:</b> +39 820 992 6628</li>

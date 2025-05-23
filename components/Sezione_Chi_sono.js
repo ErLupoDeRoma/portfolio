@@ -1,7 +1,7 @@
 export default function Sezione_Chi_sono() {
   return (
     <>
-      <div className="mt-5 w-430 h-120 rounded-lg flex justify-start border border-white">
+      <div className="h-full mt-5 rounded-lg flex justify-start border border-white">
         <div className="w-full">
           <div className="mt-5 ml-5 text-2xl font-semibold">Chi sono ?</div>
           <div className="mt-2 ml-5 text-lg">

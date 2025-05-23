@@ -53,11 +53,13 @@ export default function Sezione_Esperienze() {
 
   return (
     <>
-      <div className=" flex justify-start">
-        <Riquadro_Navigazione_Esperienze
-          bordoFisso={esperienza_da_mostrare}
-          onSelect={imposta_esperienza}
-        />
+      <div className=" flex flex-col md:flex-row md:h-100 justify-between">
+        <div>
+          <Riquadro_Navigazione_Esperienze
+            bordoFisso={esperienza_da_mostrare}
+            onSelect={imposta_esperienza}
+          />
+        </div>
         <div>
           <AnimatePresence mode="wait">
             <motion.div

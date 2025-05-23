@@ -61,19 +61,19 @@ export default function Home() {
     <div>
       <div
         id="bagliore"
-        className="rounded-full opacita transform -translate-x-1/2 -translate-y-1/2 blur-2xl fixed pointer-events-none inset-0 z-30 transition duration-300 h-600 w-600"
+        className="rounded-full opacita transform -translate-x-1/2 -translate-y-1/2 blur-2xl fixed pointer-events-none inset-0 z-1 transition duration-300 h-600 w-600"
       ></div>
       <div
         id="cursore"
         className="fixed top-0 left-0 w-3 h-3 pointer-events-none z-50 transition-[width,height] duration-200 ease-out outline-2 outline-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
       ></div>
 
-      <div className="mt-15 ml-15 flex justify-start ">
+      <div className="pt-20 pb-5 md:px-20 flex justify-between mx-auto md:flex-row flex-col">
         <IO />
         <Immagini />
       </div>
       <br></br>
-      <div className="grid grid-cols-1 mt-5 ml-15">
+      <div className="grid grid-cols-1 md:px-20 ">
         <Navbar bordoFisso={sezione_da_mostrare} onSelect={imposta_sezione} />
 
         <AnimatePresence mode="wait">
