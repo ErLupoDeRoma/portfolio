@@ -1,10 +1,12 @@
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+@include media-breakpoint-up(xxl) { ... }
+
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
@@ -18,19 +20,19 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: rgb(15 23 42);
-    --foreground: #ededed;
+    --foreground: #000000;
   }
 }
 
 html {
-  cursor: none;
+  
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-   cursor: none;
+ 
   /*cursor: url('/images/PNG.png') 16 16, auto;*/
 }
 
@@ -39,18 +41,78 @@ body {
   line-height: 80px;
 }
 
-.cursor {
-  cursor: none;
-}
 
 .nav-option:hover {
   border-color: #ffffff;
   border-width: 2px;
   border-style: solid;
-  cursor: none;
   /*cursor: url('/images/PNG.png') 16 16, auto;*/
 }
 
 .opacita {
    background: radial-gradient(600px, rgba(29, 78, 216, 0.20), transparent 80%)
+}
+
+.generale-io{
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 16px;
+  border: 1px solid white;
+  flex-direction: column;
+}
+
+@include media-breakpoint-down(md) {
+  .generale-io{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
+.img-container-io{
+  display: flex;
+  padding-top: 15px;
+  justify-content: space-around;
+}
+
+.butt-container-io{
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-around;
+}
+
+.tit-container-io{
+  display: flex;
+  padding-top: 10px;
+  width: 100%;
+  padding-left: 33px;
+}
+
+.navvier {
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .navbar-custom .container{
+    margin-left: 0px!important;
+  }
+}
+
+.contenitore-carosello{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elemento-carosello{
+  width: 60rem;
+}
+
+.Io_sono{
+  width: 10rem;
+}
+
+.Invincible{
+  width: 100%;
+  height: 100%;
 }

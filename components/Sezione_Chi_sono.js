@@ -1,28 +1,35 @@
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 export default function Sezione_Chi_sono() {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      <div className="h-full mt-5 rounded-lg flex justify-start border border-white">
-        <div className="w-full">
-          <div className="mt-5 ml-5 text-2xl font-semibold">Chi sono ?</div>
-          <div className="mt-2 ml-5 text-lg">
-            Sed dignissim lacus sem, sit amet rhoncus dui consectetur in. Morbi
-            tempor tellus a est luctus pharetra in sed lorem. Mauris laoreet
-            arcu lectus, venenatis tincidunt massa rhoncus in. Vivamus finibus,
-            elit eu convallis consequat, quam risus dictum elit, faucibus
-            fermentum quam orci sed libero. Nunc dignissim tristique nibh.
-            Maecenas scelerisque mollis odio in congue. Praesent finibus, erat a
-            faucibus feugiat, ipsum arcu faucibus quam, eget efficitur risus
-            erat eget enim. Praesent ultrices nec dui vitae vehicula. Quisque
-            dictum ipsum et varius volutpat. Praesent sagittis mattis purus.
-            Curabitur odio arcu, sodales a enim nec, ultricies suscipit mi.
-            Etiam vestibulum velit velit, quis ornare leo fringilla non. Nam leo
-            justo, facilisis ut cursus euismod, commodo sed lorem. Nunc luctus
-            nisi ligula, sit amet sagittis augue laoreet nec. Fusce molestie
-            venenatis nibh, sit amet convallis ex scelerisque ut. Nunc laoreet
-            pellentesque arcu.
-          </div>
-        </div>
-      </div>
+      <Button variant="primary" onClick={handleShow} className='Io_sono'>
+        Io sono ...
+      </Button>
+
+      <Modal show={show} onHide={handleClose} fullscreen={true} animation={false}>
+        <Modal.Header closeButton />
+        <Modal.Body>
+          <video
+            className='Invincible'
+            controls = {false}
+            autoPlay
+            style={{ width: '100%', height: '100%' }}
+          >
+            <source src="/images/Invincible title card blood-cut.mp4" type="video/mp4" />
+            Il tuo browser non supporta il tag video.
+          </video>
+        </Modal.Body>
+        <Modal.Footer />
+      </Modal>
     </>
   );
 }

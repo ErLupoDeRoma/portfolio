@@ -3,7 +3,7 @@ import Template_Progetto from "./Template_Progetto";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-export default function Sezione_Progetti() {
+export default function Sezione_Progetti({ progetto_da_mostrare }) {
   const Progetto1 = {
     Titolo: "Progetto 1",
     Testo:
@@ -39,8 +39,8 @@ export default function Sezione_Progetti() {
     Immagine: "/images/Prodotto 2.png",
   };
 
-  const [progetto_da_mostrare, imposta_progetto] = useState("progetto1");
-  var id_selezionato = 1;
+  /*   const [progetto_da_mostrare, imposta_progetto] = useState("progetto1");
+   */ var id_selezionato = 1;
   const progetto_selezionato = () => {
     if (progetto_da_mostrare == "progetto1") {
       id_selezionato = 1;
@@ -54,12 +54,8 @@ export default function Sezione_Progetti() {
   return (
     <>
       <div className="flex flex-col md:flex-row justify-between h-full">
-        <Riquadro_Navigazione_Progetti
-          bordoFisso={progetto_da_mostrare}
-          onSelect={imposta_progetto}
-        />
         <div>
-          <AnimatePresence mode="wait" className="h-full ">
+          <AnimatePresence mode="wait" className="h-full">
             <motion.div
               key={id_selezionato}
               initial={{ opacity: 0, x: -20 }}

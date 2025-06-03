@@ -3,65 +3,97 @@ import Template_Esperienze from "./Template_Esperienze";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-export default function Sezione_Esperienze() {
-  const esperienza1 = {
-    Titolo: "Esperienza 1",
-    Testo:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi" +
-      "ultrices posuere nibh, nec dictum nisi lobortis ac. Donec aliquet," +
-      "tortor et pellentesque malesuada, ex lorem auctor turpis, non" +
-      "sagittis mauris ante nec nulla. Aenean ut ipsum at orci laoreet" +
-      "consectetur. Donec pulvinar dignissim finibus. Praesent pharetra" +
-      "vulputate erat, a feugiat felis pharetra eget. Lorem ipsum dolor sit" +
-      "amet, consectetur adipiscing elit. Mauris nulla arcu, bibendum non" +
-      "lobortis vitae, viverra nec tellus. Curabitur fringilla, enim non" +
-      "tristique molestie, augue nisl ultricies libero, at suscipit felis" +
-      "lacus ut nibh. Nam placerat nisl a risus imperdiet, vitae mattis" +
-      "justo pretium. Sed lorem tellus, sollicitudin eget ligula nec," +
-      "pulvinar accumsan libero. Sed accumsan fringilla eros, sed fermentum" +
-      "erat porttitor ut.",
-    Immagine: "/images/Venistar.png",
+export default function Sezione_Esperienze({ esperienza_da_mostrare }) {
+  const Esperienza1 = {
+    Titoli: [
+      "Omni-Man",
+      "Invincible",
+      "Immortal",
+      "Allen the Alien",
+      
+    ],
+    
+    Testi: [
+      "Omni-Man è un potente supereroe alieno proveniente dal pianeta Viltrum. "+
+      "Padre di Invincible, si presenta inizialmente come protettore della Terra. "+
+      "In realtà ha una missione segreta legata alla conquista del pianeta. "+
+      "Il suo personaggio è complesso e pieno di contrasti morali.",
+       
+      
+      "Invincible, è un giovane supereroe metà umano e metà alieno. "+
+       "Figlio del potente Omni-Man, scopre i suoi poteri da adolescente. "+
+       "Cerca di proteggere il mondo affrontando minacce sempre più grandi. "+
+       "La sua storia è segnata da conflitti interiori e dure scelte morali.",
+
+
+      "Immortal è un supereroe antico e resistente, "+
+      "capace di vivere per secoli grazie ai suoi poteri rigenerativi. "+
+      "È stato un leader dei Guardiani del Globo. "+
+      "Ha combattuto molte battaglie nella storia dell'umanità. "+
+      "Nonostante le perdite, continua a lottare per la giustizia.",
+
+
+      "Allen l'Alieno è un emissario della Coalizione dei Pianeti, "+
+      "forte e resistente, con un carattere leale e determinato. "+
+      "Incontra Invincible durante una missione e diventa suo amico. "+
+      "È impegnato nella lotta contro l'impero Viltrumita. ",
+
+
+      
+      
+    ],
+    Immagini: [
+      "/images/Omni-man.png",
+      "/images/Invincible.png",
+      "/images/Immortal.png",
+      "/images/Allen the Alien.png",
+      
+      
+    ]
+    
   };
 
-  const esperienza2 = {
-    Titolo: "Esperienza 2",
-    Testo:
-      "Morbi molestie ac nisi eget tincidunt. Suspendisse dapibus varius mauris eget volutpat." +
-      "Nulla interdum est quis sapien pellentesque, ac consequat elit porttitor. Pellentesque habit" +
-      "ant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque" +
-      "penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vehicula, metus" +
-      "a cursus vulputate, ex tortor commodo neque, vel molestie nisl lacus at urna. Duis" +
-      "maximus tortor rutrum, laoreet nulla ut, ultrices elit. Phasellus a dui dolor." +
-      "Nullam tempus, neque id venenatis accumsan, augue lectus rutrum nulla, eget" +
-      "aliquam tortor neque nec est. Donec pretium turpis non magna finibus efficitur." +
-      "Aenean elementum nunc eu erat aliquet cursus. Fusce eu ante" +
-      "turpis. In eget facilisis justo.",
-    Immagine: "/images/Prodotto 2.png",
+  const Esperienza2 = {
+    Titoli: [
+      
+    ],
+    
+    Testi: [
+      
+      
+    ],
+    Immagini: [
+      "/images/Invincible.png",
+      "/images/Invincible 1.png",
+      "/images/Invincible 2.png",
+      "/images/Invincible 3.png",
+      "/images/Invincible 4.png",
+      "/images/Invincible 5.png",
+      
+    ]
+    
   };
 
-  const [esperienza_da_mostrare, imposta_esperienza] = useState("esperienza1");
-  var id_selezionato = 1;
+  
+
+  /*   const [esperienza_da_mostrare, imposta_esperienza] = useState("esperienza1");
+   */ var id_selezionato = 1;
   const esperienza_selezionata = () => {
     if (esperienza_da_mostrare == "esperienza1") {
       id_selezionato = 1;
-      return esperienza1;
+      return Esperienza1;
     } else if (esperienza_da_mostrare == "esperienza2") {
       id_selezionato = 2;
-      return esperienza2;
+      return Esperienza2;
     }
+  
   };
 
   return (
     <>
-      <div className=" flex flex-col md:flex-row justify-between h-full">
-        <div>
-          <Riquadro_Navigazione_Esperienze
-            bordoFisso={esperienza_da_mostrare}
-            onSelect={imposta_esperienza}
-          />
-        </div>
-        <div>
-          <AnimatePresence mode="wait">
+      <div className="flex flex-col md:flex-row justify-between h-full">
+        <div  className="contenitore-carosello">
+          <AnimatePresence mode="wait" className="h-full">
             <motion.div
               key={id_selezionato}
               initial={{ opacity: 0, x: -20 }}

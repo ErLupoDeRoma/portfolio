@@ -9,6 +9,7 @@ import Sezione_Esperienze from "@/components/Sezione_Esperienze";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 export default function Home() {
   useEffect(() => {
     let cursore = document.getElementById("cursore");
@@ -42,7 +43,22 @@ export default function Home() {
     });
   }, []);
 
+  const [progettoSelezionato, setProgettoSelezionato] = useState();
+  const [esperienzaSlezionata, setEsperienzaSelezionata] = useState();  
   const [sezione_da_mostrare, imposta_sezione] = useState("chi_sono");
+
+  useEffect(() => {
+  // Se la sezione è "progetto1" o "progetto2", setta anche il progetto
+  if (sezione_da_mostrare === "progetto1" || sezione_da_mostrare === "progetto2") {
+    setProgettoSelezionato(sezione_da_mostrare);
+    imposta_sezione("progetti"); // cambia la sezione visualizzata
+  }
+  else if (sezione_da_mostrare === "esperienza1" || sezione_da_mostrare === "esperienza2") {
+    setEsperienzaSelezionata(sezione_da_mostrare);
+    imposta_sezione("esperienze");
+  }
+
+}, [sezione_da_mostrare]);
   var id_selezionato = 1;
   const sezione_selezionata = () => {
     if (sezione_da_mostrare == "chi_sono") {
@@ -50,11 +66,12 @@ export default function Home() {
       return <Sezione_Chi_sono />;
     } else if (sezione_da_mostrare == "progetti") {
       id_selezionato = 2;
-      return <Sezione_Progetti />;
+      return <Sezione_Progetti progetto_da_mostrare={progettoSelezionato} />;
     } else if (sezione_da_mostrare == "esperienze") {
       id_selezionato = 3;
-      return <Sezione_Esperienze />;
+      return <Sezione_Esperienze esperienza_da_mostrare={esperienzaSlezionata} />;
     }
+    
   };
 
   return (
@@ -70,7 +87,7 @@ export default function Home() {
 
       <div className="pt-20 pb-5 md:px-20 flex justify-between mx-auto md:flex-row flex-col">
         <IO />
-        <Immagini />
+        
       </div>
       <br></br>
       <div className="grid grid-cols-1 md:px-20 ">
